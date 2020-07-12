@@ -1,0 +1,118 @@
+nav.nav-wrap
+  transition: all 0.3s ease-in
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 900
+  max-width: 1000px
+  display: flex
+  justify-content: space-between
+  margin: auto
+  padding: 40px
+  @media screen and (max-width: 600px)
+    padding: 35px 20px
+  a.nav-logo
+    height: 50px
+    svg
+      height: 100%
+      width: auto
+  a.nav-logo.nav.dark
+    svg
+      path
+        fill: $primary
+  ul.navigation
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    @media screen and (max-width: 600px)
+      display: none
+    li
+      display: block
+      padding-right: 30px
+      a
+        color: $white
+        transition: all 0.15s ease-in
+        font-size: 1em
+      a:hover
+        color: darken($white, 25%)
+    li:last-of-type
+      padding-right: 0px
+  ul.navigation.nav-dark
+    li
+      a
+        color: $primary
+      a:hover
+        color: darken($white, 25%)
+//toggled nav
+.nav-toggle-open-wrapper, .nav-toggle-close-wrapper
+  position: relative
+  height: 50px
+  width: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  overflow: visible
+  svg
+    width: 24px
+    height: auto
+.nav-toggle-open-wrapper
+  z-index: 999
+  svg
+    stroke: $white
+.nav-toggle-open-wrapper
+  svg
+    stroke: $primary
+.toggled-nav-wrapper
+  transition: all 0.2s ease-in-out
+  display: flex
+  align-itmes: flex-end
+  flex-direction: column
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 1002
+  width: 300px
+  height: 100%
+  padding: 35px 20px 35px 0
+  background: $white
+  .internal-nav-links-wrapper, .external-links-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    text-align: right
+  hr
+    width: 100%
+    margin: 30px 0 60px 0
+  .internal-nav-links-wrapper
+    margin-top: 50px
+    height: 192px
+    a.internal-link-wrapper
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      align-items: center
+  .external-links-wrapper
+    height: 122px
+    a.internal-link-wrapper
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      align-items: center
+.external-link-icon, .internal-link-icon
+  height: 30px
+  width: 30px
+  margin-left: 20px
+  background:
+    size: contain
+    position: center center
+    repeat: no-repeat
+.internal-link-icon-home
+  background-image: url ('../img/icons/home.svg')
+.internal-link-icon-blog
+  background-image: url ('../img/icons/blog.svg')
+.internal-link-icon-daily
+  background-image: url ('../img/icons/daily.svg')
