@@ -26,6 +26,7 @@ url: "https://saasgeneralist.com" # the base hostname & protocol for your site, 
 
 twitter_path: https://twitter.com/yenceesanjeev
 
+pathToBlogImgBin: assets/img/blog
 
 # Build settings
 permalink: pretty
