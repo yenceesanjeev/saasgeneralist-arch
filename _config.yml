@@ -22,11 +22,11 @@ title: SaaS Generalist
 email: yenceesanjeev@gmail.com
 description: Insert Description Later
 baseurl: "/yenceesanjeev" # the subpath of your site, e.g. /blog
-url: "https://saasgeneralist.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://saasgeneralist.com/" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_path: https://twitter.com/yenceesanjeev
 
-pathToBlogImgBin: assets/img/blog
+pathToBlogImgBin: assets/img/blog/
 
 # Build settings
 permalink: pretty

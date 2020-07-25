@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header class = "blog-index-header-main" style="background-image:url('{{ site.url }}{{ site.pathToBlogImgBin }}first-blog.jpg')">
+<header class = "blog-index-header-main" style="background-image:url('{{ site.url }}/{{ site.pathToBlogImgBin }}{{ page.featImg }}')">
 <div class = "overlay-dark"> </div>
 {% include nav.html %}
 <div class = "blog-index-title">
@@ -20,6 +20,14 @@ layout: default
 </div>
 <hr>
 <h5 class = "readMoreCTA"> You Might Want To Read.. </h5>
-<div class = "blogReadMoreWrapper">
+<div class = "blogIndexWrapper">
+  {% for post in site.posts limit: 3 %}
+    <div class = "blogPostContainer">
+      <a href = "{{ post.url }}" class = "blogPostFeatImg" style = "background-image: url('{{ site.url }}/{{ site.pathToBlogImgBin }}{{ post.featImg }}')"> </a>
+      <a href = "#" class = "blogCategory"> {{ post.categories }} </a>
+      <a href = "{{ post.url }}" class = "blogTitle"> {{ post.title }} </a>
+      <p class = "blogExcerpt"> {{ post.excerpt }} </p>
+    </div>
 
+  {% endfor %}
 </div>
